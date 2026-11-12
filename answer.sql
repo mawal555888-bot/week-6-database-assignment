@@ -7,7 +7,16 @@ SELECT
 FROM employees e
 INNER JOIN offices o
     ON e.officeCode = o.officeCode;
-    
+
+-- Question 2: LEFT JOIN - Products and Product Lines
+SELECT
+    p.productName,
+    p.productVendor,
+    p.productLine
+FROM products p
+LEFT JOIN productlines pl
+    ON p.productLine = pl.productLine;
+
 -- Question 3: RIGHT JOIN - Customers and Orders (first 10 orders)
 SELECT
     o.orderDate,
